@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Sorting Practice</title>
+</head>
+<body>
+<h1>This is Array sorting practice</h1>
+<button onclick="myFunction1()">Sort alphabetically</button>
+<button onclick="myFunction2()">Sort Numerically</button>
+<button onclick="myfunction3()">Sort randomly</button>
+<p id="demo"></p>
+<h1>largest number of the array is</h1>
+<p id="dem2"></p>
+
+<p id="dem1"></p>
+
+<script>
+const s=[23,25,8,15,2,5,18];
+document.getElementById("demo").innerHTML=s;
+ 
+function myFunction1()
+{
+    const x=s.sort()
+    document.getElementById("demo").innerHTML=x;
+}
+
+
+function myFunction2()
+{
+const y=s.sort(function(a,b){return a-b});
+
+document.getElementById("demo").innerHTML=y;
+
+}
+
+function myfunction3()
+{
+    const z=s.sort(function(){return 0.5- Math.random()})
+    document.getElementById("demo").innerHTML=z;
+
+}
+
+const t=s.sort(function(a,b){return a-b});
+document.getElementById("dem2").innerHTML=t;
+document.getElementById("dem1").innerHTML=t[t.length-1];
+
+</script>
+
+
+    
+</body>
+</html>
